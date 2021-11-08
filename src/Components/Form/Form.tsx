@@ -1,9 +1,9 @@
 import { Typography } from '@material-ui/core'
 import React from 'react'
 import {useFormStyles} from './FormStyles'
-import {TextBox} from '../../Components/TextField/TextBox';
+import {TextBox} from '../TextField/TextBox';
 import {Check} from '../CheckBox/Check'
-import {Buttons} from '../Button/Button'
+import {Button} from '../Button/Button'
 import { SelectField } from '../Select/SelectField';
 import {Slider} from  '../Carousel/Slider'
 
@@ -20,21 +20,30 @@ export const Form: React.FC<formProps> =() => {
     <div className={classes.formCard}>
     <div className={classes.formContent}>
     <div className={classes.formLeft}>
-        <Typography className={classes.createAcc}>Create an account</Typography> 
-        <Typography className={classes.continue}>Create an account to continue</Typography>
-         <TextBox subject='Email'
+      <div className={classes.formInstruction} >
+        <Typography align='center' className={classes.createAcc}>Create an account</Typography> 
+        <Typography align='center' className={classes.continue}>Create an account to continue</Typography>
+        </div>
+         <TextBox 
+         type='' 
+         subject='Email'
            placeholder='Topebanlosi@gmail.com' />
-         <TextBox subject='Password' 
+         <TextBox subject='Password'
+         type='password' 
            placeholder=''/>
          <TextBox subject='Confirm password'
+          type='password'
            placeholder='' />
         
-        <Check 
-        color='primary' />
+        
         <SelectField label=''
         subject='Select currency'
         />
-        <Buttons color='primary' />
+        <Check 
+        color='primary' />
+        <Button color='primary'
+        action='Get Started'
+        />
         </div>
         </div>
        
