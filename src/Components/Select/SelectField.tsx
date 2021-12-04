@@ -8,6 +8,7 @@ interface SelectProps{
     label: string;
     variant?: string;
     subject: string;
+    value?: string;
 }
 export const SelectField: React.FC<SelectProps> =({subject}) => {
   const classes = useSelectFieldStyles();
@@ -27,10 +28,15 @@ export const SelectField: React.FC<SelectProps> =({subject}) => {
     <div className={classes.selectField}>
          <Typography className={classes.boxLabel}>{subject}</Typography>
         <Select
+        value={
+          state.age === ""
+            ? "Pick a day / days"
+            :  state.age
+        }
         className={classes.selectBox}
         variant="outlined"
           native
-          value={state.age}
+      
           onChange={handleChange}
           label="Age"
           inputProps={{

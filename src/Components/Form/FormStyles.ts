@@ -1,45 +1,107 @@
 import {makeStyles}  from "@material-ui/core/styles";
-import Theme from '../../theme'
 export const useFormStyles = makeStyles((theme) => ({
   accountPage:{
     display:'flex',
-    justifyContent:'space-around'
+    justifyContent:'between',
+    width:'100vw',
+    overflowX:'hidden',
   },
   formWrapper:{
-    width:614,
-    height:'90vh'
+    width:'44vw',
+  },
+  formInstruction:{
+   marginRight:theme.spacing(10)
   },
   formCard:{
     backgroundColor:theme.design.colors.white,
     height:614,
-    width:455,
+    width:'33vw',
     boxShadow:'0px 0px 20px #0000000A',
     borderRadius:'14px',
-    margin:theme.spacing()
+    marginLeft:'auto'
  
   },
   formContent:{
-marginLeft: '25%',
+    marginTop:theme.spacing(5),
+marginLeft: '22%',
 
   },
-  formLeft:{},
+  formLeft:{
+    
+  },
   formRight:{},
   createAcc:{
-    marginLeft: '12%',
+    paddingTop:theme.spacing(3),
       color:theme.design.colors.black ,
       fontStyle:'normal',
       font:theme.typography.fontFamily ,
       fontSize:theme.typography.fontSize*1.3,
-      fontWeight:'normal',
+      fontWeight:'bold',
   },
   continue:{
     marginBottom:theme.spacing(3.8),
-    marginLeft: '7%',
       font:theme.typography.fontFamily,
       fontWeight:'normal',
-      color:theme.design.colors.grey80 ,
+      color:theme.design.colors.grey70 ,
       fontSize:theme.typography.fontSize*1,
-  }
+  },
+
+
+
+  /**MEDIA QUERIES */
+
+'@media screen and (max-width: 890px)': {
+  formWrapper:{
+    width:'100%',
+  },
+  accountPage:{
+   flexDirection:'column'
+  },
+  formInstruction:{
+    marginRight:theme.spacing(23)
+   },
+  formCard:{
+    backgroundColor:theme.design.colors.white,
+    width:'100vw',
+    boxShadow:'none',
+    borderRadius:'14px',
+    marginLeft:0,
+ 
+  },
+
+},
+'@media screen and (max-width: 500px)': {
+  formWrapper:{
+    width:'100%',
+  },
+  accountPage:{
+   flexDirection:'column'
+  },
+  formInstruction:{
+    marginRight:theme.spacing(22),
+
+   },
+  formCard:{
+    backgroundColor:theme.design.colors.white,
+    width:'100vw',
+    boxShadow:'none',
+    borderRadius:'14px',
+    marginLeft:0,
+ 
+  },
+  formContent:{
+    marginTop:theme.spacing(5),
+marginLeft: '8%',
+
+  },
+  
+  
+}
 
 }))
+
+
+
+ 
+
 

@@ -1,13 +1,14 @@
 import {makeStyles}  from "@material-ui/core/styles";
 export const useCarouselStyles = makeStyles((theme) => ({
     carousel:{
-        width:752,
-        height:'90vh',
+        width:'55vw',
+        height:'100vh',
         background: 'transparent linear-gradient(180deg, #FFFFFF 0%, #80BFFF 100%) 0% 0%',
         display:'flex',
         flexDirection:'column',
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+        marginLeft:theme.spacing(7)
     } ,
     sliderContent:{
         display:'flex',
@@ -36,5 +37,14 @@ export const useCarouselStyles = makeStyles((theme) => ({
         height:54,
     },
     
+  /**MEDIA QUERIES */
 
+  '@media screen and (max-width: 890px)': {
+    carousel:{
+        width:'100%',
+        marginLeft:theme.spacing(0),
+        overflowX:'hidden',
+        
+    } ,
+  }
 }))

@@ -16,6 +16,16 @@ width:'74%',
 backgroundColor:theme.design.colors.gray30,
 border:'0.5px solid #BCBCBC',
 borderRadius: 3,
-    }
+    },
+     /**MEDIA QUERIES */
+
+  '@media screen and (max-width: 500px)': {
+    selectBox:{
+        width:'85%',
+        backgroundColor:theme.design.colors.gray30,
+        border:'0.5px solid #BCBCBC',
+        borderRadius: 3,
+            },
+  }
 
 }))

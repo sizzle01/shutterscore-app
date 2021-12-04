@@ -8,6 +8,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 interface checkProps{
     label?: string;
     color: string;
+   
 }
 export const Check: React.FC<checkProps> =() => {
     const classes = useCheckStyles()
@@ -21,15 +22,17 @@ export const Check: React.FC<checkProps> =() => {
         <div>
            
            <FormControlLabel
+            className={classes.checkBox}
         control={
           <Checkbox
+        
             checked={state.checked}
             onChange={handleChange}
             name="checked"
             color="primary"
           />
         }
-        label="I Accept these terms and conditions"
+        label={<Typography className={classes.checkBoxLabel} >I accept these terms and conditions</Typography>}
       />
          
         </div>

@@ -115,10 +115,14 @@ export const theme: any = {
       error: "#FF0000",
       gray90: "#000E48",
      gray80: "#5C5C5C",
+     gray75:'#525252',
      gray70:'#626262',
+     gray50:'#979797',
+     gray40:'#CCCCCC',
      gray30:'#F8F8F8',
-     blue: '#2994FF'
-      
+     blue: '#2994FF',
+     lightBlue:'#F5F6FA',
+     red:'#FF6464',
     },
   },
   overrides: {

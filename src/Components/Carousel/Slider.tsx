@@ -17,12 +17,12 @@ export const Slider: React.FC<SliderProps> =() =>
     var items = [
         {
            image: <img src='/card.png' alt='atm'/>,
-            name: "Pay anywhere, anytime",
+            name: "Pay with card",
             description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
         },
         {
             image: <img src='/bank.png' alt='atm'/>,
-             name: "Pay anywhere, anytime",
+             name: "Grow your Funds",
              description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
          },
          {
@@ -35,11 +35,7 @@ export const Slider: React.FC<SliderProps> =() =>
     return (
         <Carousel className={classes.carousel}
         navButtonsAlwaysInvisible 
-        activeIndicatorIconButtonProps={{
-            style: {
-                backgroundColor: '#FFFFFF',
-            }
-        }}
+    
         indicatorIconButtonProps={{
             style: {
                 padding: '5px',   
