@@ -2,12 +2,25 @@ import { Select, Typography } from '@material-ui/core'
 import React from 'react'
 import { TransactionHistoryStyles } from './TransactionHistoryStyles'
 import moment from 'moment'
-import Mastercard from '../../images/mastercard.png'
+import Transactions from '../../Mock'
+import Food from '../../images/food.png'
 
 interface TransactionHistoryProps {}
 export const TransactionHistory: React.FC<TransactionHistoryProps> = () => {
   const classes = TransactionHistoryStyles()
   const transactionDate = moment().format('MMMM DD')
+
+  const Transactions = [
+    {
+      itemIcon: ' ../../images/food.png ',
+      itemName: '”Food & Drinks” restaurant ',
+      itemType: 'Cafe and restaurants',
+      cardId: 'Card: ** 3478',
+      transactionAmount: -140,
+      transactionAmountType: 'UAH',
+    },
+  ]
+
   return (
     <div className={classes.historyContainer}>
       <div className={classes.historyContent}>
@@ -25,27 +38,38 @@ export const TransactionHistory: React.FC<TransactionHistoryProps> = () => {
         </Typography>
 
         <div className={classes.transactionItem}>
-          <div className={classes.transactionItemInfo}>
-            <div className={classes.itemObject}>
-              <div className={classes.itemIcon}>
-                <img src={Mastercard} alt="item icon" />
+          {Transactions.map((Transaction, index) => {
+            return (
+              <div key={index}>
+                <div className={classes.transactionItemInfo}>
+                  <div className={classes.itemObject}>
+                    <div className={classes.itemIcon}>
+                      <img src={Transaction.itemIcon} alt="item icon" />
+                    </div>
+                    <div className={classes.itemDescription}>
+                      <Typography className={classes.itemName}>
+                        {Transaction.itemName}
+                      </Typography>
+                      <Typography className={classes.itemType}>
+                        {Transaction.itemType}
+                        <span className={classes.cardId}>
+                          {Transaction.cardId}
+                        </span>
+                      </Typography>
+                    </div>
+                  </div>
+                </div>
+                <div className={classes.transactionPrice}>
+                  <Typography className={classes.transactionAmount}>
+                    {Transaction.transactionAmount}
+                    <span className={classes.transactionAmountType}>
+                      {Transaction.transactionAmountType}
+                    </span>
+                  </Typography>
+                </div>
               </div>
-              <div className={classes.itemDescription}>
-                <Typography className={classes.itemName}>
-                  ”Food & Drinks” restaurant
-                </Typography>
-                <Typography className={classes.itemType}>
-                  Cafe and restaurants
-                  <span className={classes.cardId}>Card: ** 3478</span>
-                </Typography>
-              </div>
-            </div>
-          </div>
-          <div className={classes.transactionPrice}>
-            <Typography className={classes.transactionAmount}>
-              - 140 <span className={classes.transactionAmountType}>UAH</span>
-            </Typography>
-          </div>
+            )
+          })}
         </div>
       </div>
     </div>
