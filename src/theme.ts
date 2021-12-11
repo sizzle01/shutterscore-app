@@ -108,6 +108,7 @@ export const theme: any = {
     },
     colors: {
       white:'#FFFFFF',
+      black2:'#373737',
       black: "#000000",
       info: "#2F80ED",
       success: "#27AE60",
@@ -117,6 +118,8 @@ export const theme: any = {
      gray80: "#5C5C5C",
      gray75:'#525252',
      gray70:'#626262',
+     gray60:'#515151',
+     gray55:'#999999',
      gray50:'#979797',
      gray40:'#CCCCCC',
      gray30:'#F8F8F8',

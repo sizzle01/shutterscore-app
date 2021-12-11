@@ -67,17 +67,11 @@ marginLeft:theme.spacing(2.5),
       
         },
         balanceDesc:{
-            color:theme.design.colors.white,
         fontSize: theme.typography.fontSize*.5,
-        fontWeight: 'normal',
-        fontFamily:theme.typography.fontFamily,
-        
         },
         balance:{
-            color:theme.design.colors.white,
+            
             fontSize: theme.typography.fontSize*2.2,
-            fontWeight: 'normal',
-            fontFamily:theme.typography.fontFamily,
             
         },
         fundButton:{

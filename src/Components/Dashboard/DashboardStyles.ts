@@ -33,10 +33,28 @@ width:'84.5%',
     width:'100%'
   },
   cardWrapper:{
+    overflowX:'hidden',
+    scrollBar:'none',
     display:'flex',
     padding:theme.spacing(1, 0, 3, 0)
-  }
+  },
+/**Media queries */
+'@media screen and (max-width: 935px)': {
+  dashboardCont:{
+  width:'100%'
 
+ },
+
+},
+
+'@media screen and (max-width: 768px)': {
+
+
+},
+'@media screen and (max-width: 500px)': {
+
+
+},
 }))
 
 

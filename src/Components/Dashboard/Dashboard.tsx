@@ -5,6 +5,7 @@ import { Card, Typography } from '@material-ui/core'
 import { SideBar } from '../sideBar/SideBar'
 import { WalletCard } from '../WalletCard'
 import { Cards } from '../Cards'
+import { TransactionHistory } from '../Transaction'
 
 interface DashboardProps {}
 
@@ -23,14 +24,9 @@ export const Dashboard: React.FC<DashboardProps> = () => {
           </Typography>
           <div className={classes.dashboardLine}></div>
           <div className={classes.cardWrapper}>
-            <WalletCard balance="$25,356,01" />
-            <Cards
-              amount={5423472}
-              currency="UAH"
-              cardNumber={3332873223473478}
-              cardDate="10/22"
-            />
+            <Cards />
           </div>
+          <TransactionHistory />
         </div>
       </div>
     </div>

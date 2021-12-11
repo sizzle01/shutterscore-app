@@ -1,8 +1,13 @@
 import {makeStyles}  from "@material-ui/core/styles";
 export const CardStyles = makeStyles((theme) => ({
   
+    cardCont:{
+        display:'flex',
+       overflowY:'hidden',
+       scrollBar:'none'
+    },
     card:{
-        marginLeft:theme.spacing(1.4),
+        margin:theme.spacing(0, 1.4),
     width:'231px',
     height:'135px',
     borderRadius:'15px',
@@ -11,6 +16,7 @@ export const CardStyles = makeStyles((theme) => ({
     
     cardInfo:{
 marginLeft:theme.spacing(2.4),
+width:'181px',
 
     },
     cardBalance:{

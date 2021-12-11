@@ -3,7 +3,7 @@ export const useSideBarStyles = makeStyles((theme) => ({
     sideMenu:{
 width:'15.5%',
 height:'100vh',
-backgroundColor:theme.design.colors.gray75,
+backgroundColor:theme.design.colors.white,
 display:'flex',
 flexDirection:'column',
 alignItems:'center'
@@ -44,7 +44,24 @@ textDecoration:'none'
     },
     exit:{
         color:theme.design.colors.red,
-    }
+    },
+    /**Media queries */
+'@media screen and (max-width: 935px)': {
+    sideMenu:{
+      display:'none'
+           },
+    
+  
+},
+
+'@media screen and (max-width: 768px)': {
+ 
+
+},
+'@media screen and (max-width: 500px)': {
+ 
+
+},
 
 }))
 
