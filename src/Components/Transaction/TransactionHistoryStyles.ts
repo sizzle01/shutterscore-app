@@ -37,12 +37,12 @@ export const TransactionHistoryStyles = makeStyles((theme) => ({
     marginTop:theme.spacing(2.5),
   },
   transactionItem:{
-    display:'flex',
-    justifyContent:'space-between',
     marginTop:theme.spacing(3)
   },
   transactionItemInfo:{
-
+display:'flex',
+justifyContent:'space-between',
+padding:theme.spacing(1),
   },
   itemObject:{
       display:'flex',

@@ -14,7 +14,13 @@ width:'84.5%',
   dashboardInfo:{
     width:'90%'
       },
-  dashboardHead:{
+      dashTop:{
+
+      },
+      addCard:{
+        
+      },
+  dashboardTitle:{
     color:theme.design.colors.black,
     fontSize: theme.typography.fontSize*1.7,
     fontWeight: 'normal',

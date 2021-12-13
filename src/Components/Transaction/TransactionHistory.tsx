@@ -5,8 +5,20 @@ import moment from 'moment'
 import Transactions from '../../Mock'
 import Food from '../../images/food.png'
 
-interface TransactionHistoryProps {}
-export const TransactionHistory: React.FC<TransactionHistoryProps> = () => {
+interface TransactionHistoryProps {
+  itemName?: string
+  itemType?: string
+  cardId?: string
+  transactionAmount?: number
+  transactionAmountType?: string
+}
+export const TransactionHistory: React.FC<TransactionHistoryProps> = ({
+  itemName,
+  itemType,
+  cardId,
+  transactionAmount,
+  transactionAmountType,
+}) => {
   const classes = TransactionHistoryStyles()
   const transactionDate = moment().format('MMMM DD')
 
@@ -17,6 +29,22 @@ export const TransactionHistory: React.FC<TransactionHistoryProps> = () => {
       itemType: 'Cafe and restaurants',
       cardId: 'Card: ** 3478',
       transactionAmount: -140,
+      transactionAmountType: 'UAH',
+    },
+    {
+      itemIcon: ' ../../images/food.png ',
+      itemName: '”Walmart” store (Main Str. 13) ',
+      itemType: 'Groceries & food',
+      cardId: 'Card: ** 7813',
+      transactionAmount: -80,
+      transactionAmountType: 'USD',
+    },
+    {
+      itemIcon: ' ../../images/food.png ',
+      itemName: 'Transfer from Alexey',
+      itemType: 'Transfer from Alexey',
+      cardId: 'Transfer from Alexey',
+      transactionAmount: 6000,
       transactionAmountType: 'UAH',
     },
   ]
@@ -40,23 +68,21 @@ export const TransactionHistory: React.FC<TransactionHistoryProps> = () => {
         <div className={classes.transactionItem}>
           {Transactions.map((Transaction, index) => {
             return (
-              <div key={index}>
-                <div className={classes.transactionItemInfo}>
-                  <div className={classes.itemObject}>
-                    <div className={classes.itemIcon}>
-                      <img src={Transaction.itemIcon} alt="item icon" />
-                    </div>
-                    <div className={classes.itemDescription}>
-                      <Typography className={classes.itemName}>
-                        {Transaction.itemName}
-                      </Typography>
-                      <Typography className={classes.itemType}>
-                        {Transaction.itemType}
-                        <span className={classes.cardId}>
-                          {Transaction.cardId}
-                        </span>
-                      </Typography>
-                    </div>
+              <div className={classes.transactionItemInfo}>
+                <div className={classes.itemObject}>
+                  <div className={classes.itemIcon}>
+                    <img src={Food} alt="item icon" />
+                  </div>
+                  <div className={classes.itemDescription}>
+                    <Typography className={classes.itemName}>
+                      {Transaction.itemName}
+                    </Typography>
+                    <Typography className={classes.itemType}>
+                      {Transaction.itemType}
+                      <span className={classes.cardId}>
+                        {Transaction.cardId}
+                      </span>
+                    </Typography>
                   </div>
                 </div>
                 <div className={classes.transactionPrice}>

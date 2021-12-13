@@ -16,7 +16,15 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <Router>
-          <RouterPage path="sidebar" pageComponent={<Dashboard />} />
+          <RouterPage
+            path="/dashboard"
+            pageComponent={<Dashboard DashboardTitle="Dashboard" />}
+          />
+          <RouterPage
+            path="cards"
+            pageComponent={<Dashboard DashboardTitle="My cards" />}
+          />
+
           <RouterPage path="/form" pageComponent={<Form />} />
         </Router>
       </div>

@@ -4,7 +4,7 @@ import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography'
-import Visa from '/images/visa.png'
+import Visa from '../../images/visa.png'
 import EditIcon from '@mui/icons-material/Edit'
 import Data from '../../Data'
 import { WalletCard } from '../WalletCard/WalletCard'
@@ -13,6 +13,7 @@ interface CardsProps {
   currency?: string
   cardNumber?: number
   cardDate?: string
+  wallet: any
 }
 
 export const Cards: React.FC<CardsProps> = ({
@@ -20,9 +21,10 @@ export const Cards: React.FC<CardsProps> = ({
   cardNumber,
   currency,
   cardDate,
+  wallet,
 }) => {
   const classes = CardStyles()
-
+  // const wallet = <WalletCard balance="265,285,750" />
   const cardDetails = [
     {
       amount: '744,397.56',
@@ -40,7 +42,7 @@ export const Cards: React.FC<CardsProps> = ({
 
   return (
     <div className={classes.cardCont}>
-      <WalletCard balance="$25,356,01" />
+      {wallet}
       {cardDetails.map((card, index) => {
         return (
           <div className={classes.card} key={index}>
