@@ -15,10 +15,15 @@ width:'84.5%',
     width:'90%'
       },
       dashTop:{
+display:'flex',
 
       },
       addCard:{
-        
+        width:'200px',
+        margin:theme.spacing(1.8, 0, 0, 'auto'),
+      },
+      addButton:{
+       
       },
   dashboardTitle:{
     color:theme.design.colors.black,

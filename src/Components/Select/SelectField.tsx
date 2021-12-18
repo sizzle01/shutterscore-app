@@ -7,16 +7,18 @@ interface SelectProps {
   label?: string
   variant?: string
   subject?: string
-  value?: string
+  value: string
+  name: string
+  onChange?: (e: React.FormEvent<HTMLInputElement>) => void
 }
 export const SelectField: React.FC<SelectProps> = ({ subject }) => {
   const classes = useSelectFieldStyles()
   const [state, setState] = React.useState<{
-    age: string | number
+    currency: string | number
     name: string
   }>({
-    age: '',
-    name: 'hai',
+    currency: '',
+    name: 'usd',
   })
   const handleChange = (
     event: React.ChangeEvent<{ name?: string; value: unknown }>,
@@ -32,15 +34,14 @@ export const SelectField: React.FC<SelectProps> = ({ subject }) => {
     <div className={classes.selectField}>
       <Typography className={classes.boxLabel}>{subject}</Typography>
       <Select
-        value={state.age === '' ? 'Pick a day / days' : state.age}
+        value={state.currency === '' ? 'Select currency' : state.currency}
         className={classes.selectBox}
         variant="outlined"
         native
         onChange={handleChange}
-        label="Age"
+        label=""
         inputProps={{
-          name: 'age',
-          id: 'outlined-age-native-simple',
+          name: 'currency',
         }}
       >
         <option aria-label="None" value="" />

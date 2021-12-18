@@ -86,7 +86,13 @@ padding:theme.spacing(1),
     fontWeight: 'normal',
     fontFamily:theme.typography.fontFamily,
   },
-  transactionAmountType:{
+  positive:{
+    color :'green'
+  }, 
+  negative:{ 
+    color:'red'
+  },
+  transactionAmountTypes:{
     color:theme.design.colors.gray60,
     fontSize: theme.typography.fontSize*.85,
     fontWeight: 'normal',

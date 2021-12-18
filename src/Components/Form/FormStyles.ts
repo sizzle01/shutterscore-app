@@ -4,6 +4,7 @@ export const useFormStyles = makeStyles((theme) => ({
     display:'flex',
     justifyContent:'between',
     width:'100vw',
+    height:'100vh',
     overflowX:'hidden',
   },
   formWrapper:{
@@ -45,6 +46,10 @@ marginLeft: '22%',
       color:theme.design.colors.grey70 ,
       fontSize:theme.typography.fontSize*1,
   },
+  start:{
+    textDecoration:'none',
+    
+  },
 
 
 
@@ -52,10 +57,11 @@ marginLeft: '22%',
 
 '@media screen and (max-width: 890px)': {
   formWrapper:{
-    width:'100%',
+    
   },
   accountPage:{
-   flexDirection:'column'
+   flexDirection:'column',
+   width:'100%'
   },
   formInstruction:{
     marginRight:theme.spacing(23)

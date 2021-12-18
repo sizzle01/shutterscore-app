@@ -13,7 +13,7 @@ interface CardsProps {
   currency?: string
   cardNumber?: number
   cardDate?: string
-  wallet: any
+  wallet?: any
 }
 
 export const Cards: React.FC<CardsProps> = ({

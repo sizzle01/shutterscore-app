@@ -49,6 +49,13 @@ export const TransactionHistory: React.FC<TransactionHistoryProps> = ({
     },
   ]
 
+  // let transactionAmountTypes = []
+  // if (Transaction.transactionAmount > 500) {
+  //   transactionAmountTypes.push('positive')
+  // } else if (Transaction.transactionAmount < 500) {
+  //   transactionAmountTypes.push('negative')
+  // }
+
   return (
     <div className={classes.historyContainer}>
       <div className={classes.historyContent}>
@@ -88,7 +95,7 @@ export const TransactionHistory: React.FC<TransactionHistoryProps> = ({
                 <div className={classes.transactionPrice}>
                   <Typography className={classes.transactionAmount}>
                     {Transaction.transactionAmount}
-                    <span className={classes.transactionAmountType}>
+                    <span className={classes.transactionAmountTypes}>
                       {Transaction.transactionAmountType}
                     </span>
                   </Typography>
