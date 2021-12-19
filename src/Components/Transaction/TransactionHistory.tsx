@@ -2,8 +2,7 @@ import { Select, Typography } from '@material-ui/core'
 import React from 'react'
 import { TransactionHistoryStyles } from './TransactionHistoryStyles'
 import moment from 'moment'
-import Transactions from '../../Mock'
-import Food from '../../images/food.png'
+import { Transactions } from './Mock'
 
 interface TransactionHistoryProps {
   itemName?: string
@@ -11,6 +10,7 @@ interface TransactionHistoryProps {
   cardId?: string
   transactionAmount?: number
   transactionAmountType?: string
+  itemIcon?: any
 }
 export const TransactionHistory: React.FC<TransactionHistoryProps> = ({
   itemName,
@@ -18,36 +18,10 @@ export const TransactionHistory: React.FC<TransactionHistoryProps> = ({
   cardId,
   transactionAmount,
   transactionAmountType,
+  itemIcon,
 }) => {
   const classes = TransactionHistoryStyles()
   const transactionDate = moment().format('MMMM DD')
-
-  const Transactions = [
-    {
-      itemIcon: ' ../../images/food.png ',
-      itemName: '”Food & Drinks” restaurant ',
-      itemType: 'Cafe and restaurants',
-      cardId: 'Card: ** 3478',
-      transactionAmount: -140,
-      transactionAmountType: 'UAH',
-    },
-    {
-      itemIcon: ' ../../images/food.png ',
-      itemName: '”Walmart” store (Main Str. 13) ',
-      itemType: 'Groceries & food',
-      cardId: 'Card: ** 7813',
-      transactionAmount: -80,
-      transactionAmountType: 'USD',
-    },
-    {
-      itemIcon: ' ../../images/food.png ',
-      itemName: 'Transfer from Alexey',
-      itemType: 'Transfer from Alexey',
-      cardId: 'Transfer from Alexey',
-      transactionAmount: 6000,
-      transactionAmountType: 'UAH',
-    },
-  ]
 
   // let transactionAmountTypes = []
   // if (Transaction.transactionAmount > 500) {
@@ -78,7 +52,7 @@ export const TransactionHistory: React.FC<TransactionHistoryProps> = ({
               <div className={classes.transactionItemInfo}>
                 <div className={classes.itemObject}>
                   <div className={classes.itemIcon}>
-                    <img src={Food} alt="item icon" />
+                    <img src={Transaction.itemIcon} alt="item icon" />
                   </div>
                   <div className={classes.itemDescription}>
                     <Typography className={classes.itemName}>

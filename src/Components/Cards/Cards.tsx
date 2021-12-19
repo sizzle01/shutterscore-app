@@ -8,12 +8,14 @@ import Visa from '../../images/visa.png'
 import EditIcon from '@mui/icons-material/Edit'
 import Data from '../../Data'
 import { WalletCard } from '../WalletCard/WalletCard'
+import { cardDetails } from './Mock'
 interface CardsProps {
   amount?: string
   currency?: string
   cardNumber?: number
   cardDate?: string
   wallet?: any
+  cardIcon?: any
 }
 
 export const Cards: React.FC<CardsProps> = ({
@@ -22,23 +24,10 @@ export const Cards: React.FC<CardsProps> = ({
   currency,
   cardDate,
   wallet,
+  cardIcon,
 }) => {
   const classes = CardStyles()
   // const wallet = <WalletCard balance="265,285,750" />
-  const cardDetails = [
-    {
-      amount: '744,397.56',
-      currency: 'UAH',
-      cardNumber: '4684 4734 8957 655',
-      cardDate: '10/24',
-    },
-    {
-      amount: '879,865.49',
-      currency: 'USD',
-      cardNumber: '4685 6243 2257 399',
-      cardDate: '10/24',
-    },
-  ]
 
   return (
     <div className={classes.cardCont}>
@@ -63,7 +52,7 @@ export const Cards: React.FC<CardsProps> = ({
                   {card.cardDate}
                 </Typography>
                 <img
-                  src={Visa}
+                  src={card.cardIcon}
                   alt="mastercard logo"
                   className={classes.cardLogo}
                 />

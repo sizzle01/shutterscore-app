@@ -23,7 +23,7 @@ export const SideBar: React.FC<SideBarProps> = () => {
             <ListItemIcon className={classes.MenuIcon}>
               <HomeIcon fontSize="small" />
             </ListItemIcon>
-            <Typography variant="inherit">Dashboard</Typography>
+            Dashboard
           </MenuItem>
         </Link>
         <Link className={classes.sideBarLink} to="/cards">
@@ -35,14 +35,15 @@ export const SideBar: React.FC<SideBarProps> = () => {
           </MenuItem>
         </Link>
       </MenuList>
-
-      <Button
-        className={classes.btn}
-        variant="text"
-        startIcon={<ExitToAppIcon className={classes.exit} />}
-      >
-        Text
-      </Button>
+      <Link className={classes.logout} to="/">
+        <Button
+          className={classes.btn}
+          variant="text"
+          startIcon={<ExitToAppIcon className={classes.exit} />}
+        >
+          Logout
+        </Button>
+      </Link>
     </div>
   )
 }
