@@ -27,7 +27,6 @@ export const Cards: React.FC<CardsProps> = ({
   cardIcon,
 }) => {
   const classes = CardStyles()
-  // const wallet = <WalletCard balance="265,285,750" />
 
   return (
     <div className={classes.cardCont}>

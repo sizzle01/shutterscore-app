@@ -124,6 +124,7 @@ export const theme: any = {
      gray40:'#CCCCCC',
      gray30:'#F8F8F8',
      blue: '#2994FF',
+     deepBlue:'#00217B',
      lightBlue:'#F5F6FA',
      red:'#FF6464',
     },

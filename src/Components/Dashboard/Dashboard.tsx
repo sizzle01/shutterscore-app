@@ -6,6 +6,7 @@ import { SideBar } from '../sideBar/SideBar'
 import { WalletCard } from '../WalletCard'
 import { Cards } from '../Cards'
 import { TransactionHistory } from '../Transaction'
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline'
 
 interface DashboardProps {
   DashboardTitle: string
@@ -19,7 +20,9 @@ export const Dashboard: React.FC<DashboardProps> = ({
   cardButton,
 }) => {
   const classes = DashboardStyles()
-
+  const handleClick = () => {
+    console.log('Add card')
+  }
   return (
     <div className={classes.dashboard}>
       <SideBar />
@@ -34,13 +37,16 @@ export const Dashboard: React.FC<DashboardProps> = ({
                 Sed ut perspiciatis unde omnis iste natus error sit
               </Typography>
             </div>
-            <div className={classes.addCard}>{cardButton}</div>
+            <div className={classes.addCardContainer}>
+              <AddCircleOutlineIcon
+                onClick={handleClick}
+                className={classes.mobileAddCard}
+              />
+              <div className={classes.addCard}>{cardButton}</div>
+            </div>
           </div>
           <div className={classes.dashboardLine}></div>
-          <div className={classes.cardWrapper}>
-            {cardOption}
-            {/* <Cards wallet={<WalletCard balance="$255,356,001" />} /> */}
-          </div>
+          <div className={classes.cardWrapper}>{cardOption}</div>
           <TransactionHistory />
         </div>
       </div>

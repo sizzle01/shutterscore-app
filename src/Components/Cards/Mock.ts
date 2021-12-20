@@ -16,7 +16,7 @@ export const cardDetails = [
     },
      {
       amount: '879,865.49',
-      currency: 'USD',
+      currency: 'EUR',
       cardNumber: '4685 6243 2257 399',
       cardDate: '10/24',
       cardIcon:  '/icons/payoneer.png'   ,

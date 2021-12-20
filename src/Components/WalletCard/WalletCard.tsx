@@ -11,6 +11,9 @@ interface WalletCardProps {
 
 export const WalletCard: React.FC<WalletCardProps> = ({ balance }) => {
   const classes = WalletCardStyles()
+  const handleClick = () => {
+    console.log('button response')
+  }
   return (
     <div className={classes.wallet}>
       <CardContent className={classes.walletInfo}>
@@ -23,8 +26,12 @@ export const WalletCard: React.FC<WalletCardProps> = ({ balance }) => {
       </CardContent>
       <CardActions>
         <div className={classes.balanceButton}>
-          <Button className={classes.fundButton}>Fund Wallet</Button>
-          <Button className={classes.withdrawButton}>Withdraw Wallet</Button>
+          <Button onClick={handleClick} className={classes.fundButton}>
+            Fund Wallet
+          </Button>
+          <Button onClick={handleClick} className={classes.withdrawButton}>
+            Withdraw Wallet
+          </Button>
         </div>
       </CardActions>
     </div>
