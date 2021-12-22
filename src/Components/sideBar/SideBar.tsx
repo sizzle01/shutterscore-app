@@ -35,7 +35,7 @@ export const SideBar: React.FC<SideBarProps> = () => {
           </MenuItem>
         </Link>
       </MenuList>
-      <Link className={classes.logout} to="/form">
+      <Link className={classes.logout} to="/">
         <Button
           className={classes.btn}
           variant="text"
