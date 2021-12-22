@@ -23,7 +23,7 @@ export const SideBar: React.FC<SideBarProps> = () => {
             <ListItemIcon className={classes.MenuIcon}>
               <HomeIcon fontSize="small" />
             </ListItemIcon>
-            Dashboard
+            <Typography variant="inherit">Dashboard</Typography>
           </MenuItem>
         </Link>
         <Link className={classes.sideBarLink} to="/cards">
@@ -35,7 +35,7 @@ export const SideBar: React.FC<SideBarProps> = () => {
           </MenuItem>
         </Link>
       </MenuList>
-      <Link className={classes.logout} to="/">
+      <Link className={classes.logout} to="/form">
         <Button
           className={classes.btn}
           variant="text"

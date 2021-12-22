@@ -19,13 +19,11 @@ export const DashboardStyles = makeStyles((theme) => ({
   },
   addCardContainer: {},
   mobileAddCard: {
-    color: theme.design.colors.white,
-    background: theme.design.colors.blue,
     width: '53px !important',
     height: '53px !important',
-    borderRadius: '50%',
     pointer: 'cursor',
     display: 'none !important',
+    margin: theme.spacing(0, 0, 2, 0),
   },
   addCard: {
     width: '200px',

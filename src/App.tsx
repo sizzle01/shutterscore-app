@@ -10,6 +10,7 @@ import { RouteComponentProps } from '@reach/router'
 import { Dashboard } from './Components/Dashboard'
 import { WalletCard } from './Components/WalletCard'
 import { Cards } from './Components/Cards'
+import { Icon } from './Components/Icon'
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps,
 ) => props.pageComponent
@@ -46,6 +47,9 @@ function App() {
                     />
                   }
                   cardOption={<Cards />}
+                  mobileAddCard={
+                    <Icon IconType="AddCircleOutlineIcon" style="" />
+                  }
                 />
               }
             />
