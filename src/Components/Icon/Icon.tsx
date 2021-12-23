@@ -14,10 +14,13 @@ interface IconProps {
 }
 export const Icon: React.FC<IconProps> = ({ IconType, ...props }) => {
   const classes = IconStyles(props)
-
+  const handleChange = () => {
+    console.log('we are here')
+  }
   return (
     <div className={classes.icon}>
       <AddCircleOutlineIcon
+        onClick={handleChange}
         style={
           IconType === 'AddCircleOutlineIcon'
             ? {

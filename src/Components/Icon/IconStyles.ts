@@ -1,7 +1,9 @@
 import { makeStyles } from '@material-ui/core/styles'
 export const IconStyles = makeStyles((theme) => ({
   
-    icon:{},
+    icon:{
+      pointer:'cursor'
+    },
 
   /**Media queries */
   '@media screen and (max-width: 935px)': {
