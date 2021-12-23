@@ -36,6 +36,15 @@ export const useCarouselStyles = makeStyles((theme) => ({
         width:310,
         height:54,
     },
+    sliderButton:{
+        textDecoration:'none',
+      position:'absolute',
+      bottom:40  ,
+    right:20,
+      width:'75%',
+      display:'none'
+    },
+   
     
   /**MEDIA QUERIES */
 
@@ -46,5 +55,16 @@ export const useCarouselStyles = makeStyles((theme) => ({
         overflowX:'hidden',
         
     } ,
-  }
+    sliderButton:{
+      display:'block'
+    },
+
+  },
+  '@media screen and (max-width: 768px)': {
+
+
+  },
+  '@media screen and (max-width: 500px)': {
+    
+  },
 }))

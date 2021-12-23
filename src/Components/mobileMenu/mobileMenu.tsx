@@ -9,14 +9,18 @@ import MenuList from '@material-ui/core/MenuList'
 import MenuItem from '@material-ui/core/MenuItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import { Link } from 'react-router-dom'
+import clx from 'classnames'
 
 interface MobileMenuProps {
   scale?: string
+  className?: any
 }
-export const MobileMenu: React.FC<MobileMenuProps> = () => {
+export const MobileMenu: React.FC<MobileMenuProps> = ({ className }) => {
   const classes = useMobileMenuStyles()
   return (
-    <div className={classes.mobileMenu}>
+    <div
+      className={clx(className, classes.mobileMenu, classes.mobileMenuStatus)}
+    >
       <MenuList className={classes.menu}>
         <Link className={classes.mobileMenuLink} to="/dashboard">
           <MenuItem className={classes.menuItems}>

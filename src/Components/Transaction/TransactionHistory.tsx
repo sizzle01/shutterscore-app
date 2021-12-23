@@ -67,7 +67,22 @@ export const TransactionHistory: React.FC<TransactionHistoryProps> = ({
                   </div>
                 </div>
                 <div className={classes.transactionPrice}>
-                  <Typography className={classes.transactionAmount}>
+                  <Typography
+                    className={classes.transactionAmount}
+                    style={
+                      Transaction.transactionAmount > 0
+                        ? {
+                            color: '#27AE60',
+                          }
+                        : Transaction.transactionAmount < 0
+                        ? {
+                            color: '#FF6464',
+                          }
+                        : {
+                            color: '#000000',
+                          }
+                    }
+                  >
                     {Transaction.transactionAmount}
                     <span className={classes.transactionAmountTypes}>
                       {Transaction.transactionAmountType}

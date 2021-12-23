@@ -20,10 +20,10 @@ const initialValues = {
 interface formProps {
   scale?: string
   target?: EventTarget
-
+  slider?: any
   name?: string
 }
-export const Form: React.FC<formProps> = () => {
+export const Form: React.FC<formProps> = ({ slider }) => {
   const classes = useFormStyles()
   const [values, setValues] = useState(initialValues)
   const handleInputChange = (e: React.FormEvent<HTMLInputElement>) => {
@@ -92,16 +92,14 @@ export const Form: React.FC<formProps> = () => {
                 <Button
                   className={classes.start}
                   color="primary"
-                  action="Get Started"
+                  action="Create account"
                 />
               </Link>
             </div>
           </div>
         </div>
       </div>
-      <div className={classes.formRight}>
-        <Slider />
-      </div>
+      <div className={classes.formRight}>{slider}</div>
     </div>
   )
 }

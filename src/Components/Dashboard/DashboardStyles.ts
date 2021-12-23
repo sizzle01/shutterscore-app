@@ -79,7 +79,7 @@ export const DashboardStyles = makeStyles((theme) => ({
       fontSize: theme.typography.fontSize * 1.4,
     },
     dashboardDesc: {
-      fontSize: theme.typography.fontSize * 0.8,
+      fontSize: theme.typography.fontSize * .8,
     },
     dashboardCont: {
       backgroundColor: theme.design.colors.white,

@@ -9,6 +9,7 @@ export const useFormStyles = makeStyles((theme) => ({
   },
   formWrapper:{
     width:'44vw',
+    
   },
   formInstruction:{
    marginRight:theme.spacing(10)
@@ -54,13 +55,18 @@ marginLeft: '22%',
 
 
   /**MEDIA QUERIES */
+  '@media screen and (min-width: 889px)': {
+    
 
+  },
 '@media screen and (max-width: 890px)': {
   formWrapper:{
-    
+  display:'none'
+  },
+  formRight:{
+    width:'100%'
   },
   accountPage:{
-   flexDirection:'column',
    width:'100%'
   },
   formInstruction:{
@@ -76,12 +82,16 @@ marginLeft: '22%',
   },
 
 },
+
+'@media screen and (max-width: 768px)': {
+
+
+},
 '@media screen and (max-width: 500px)': {
   formWrapper:{
     width:'100%',
   },
   accountPage:{
-   flexDirection:'column'
   },
   formInstruction:{
     marginRight:theme.spacing(22),
