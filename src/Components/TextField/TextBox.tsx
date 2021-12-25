@@ -24,6 +24,8 @@ export const TextBox: React.FC<TextFieldProps> = ({
         variant="outlined"
         placeholder={placeholder}
         type=""
+        // error
+        // helperText="some validation error"
       />
     </div>
   )

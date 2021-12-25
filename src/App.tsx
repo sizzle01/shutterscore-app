@@ -12,6 +12,8 @@ import { WalletCard } from './Components/WalletCard'
 import { Cards } from './Components/Cards'
 import { Icon } from './Components/Icon'
 import { Slider } from './Components/Carousel'
+import { MobileHomePage } from './Components/MobileHomePage'
+
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps,
 ) => props.pageComponent
@@ -22,10 +24,8 @@ function App() {
       <div className="App">
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Form slider={<Slider />} />} />
-
+            <Route path="/" element={<MobileHomePage />} />
             <Route path="/form" element={<Form slider={<Slider />} />} />
-
             <Route
               path="/dashboard"
               element={

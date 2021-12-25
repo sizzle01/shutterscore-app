@@ -61,10 +61,10 @@ marginLeft: '22%',
   },
 '@media screen and (max-width: 890px)': {
   formWrapper:{
-  display:'none'
+    width:'100%'
   },
   formRight:{
-    width:'100%'
+   display:'none'
   },
   accountPage:{
    width:'100%'

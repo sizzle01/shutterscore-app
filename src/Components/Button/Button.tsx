@@ -9,6 +9,7 @@ interface ButtonProps {
   startIcon?: any
   action?: string
   className?: string
+  type?: string
 }
 export const Button: React.FC<ButtonProps> = ({ startIcon, action }) => {
   const classes = useButtonStyles()

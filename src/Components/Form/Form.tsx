@@ -22,6 +22,8 @@ interface formProps {
   target?: EventTarget
   slider?: any
   name?: string
+  className?: string
+  password?: string
 }
 export const Form: React.FC<formProps> = ({ slider }) => {
   const classes = useFormStyles()
@@ -36,12 +38,26 @@ export const Form: React.FC<formProps> = ({ slider }) => {
       [name as any]: value,
     })
   }
+  const submitForm = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+  }
+
+  // const validate = () => {
+  //   let temp = {}
+  //   temp.password = values.password ? '' : 'this field is required'
+  //   temp.confirmPassword = values.confirmPassword
+  //     ? ''
+  //     : 'please confirm password'
+  //   temp.email = /$|.+@.+..+/.test(values.email) ? '' : 'email is not valid'
+  //   temp.currency =
+  //     values.currency.length != 0 ? '' : 'please select your currency'
+  // }
   return (
     <div className={classes.accountPage}>
       <div className={classes.formWrapper}>
         <div className={classes.formCard}>
           <div className={classes.formContent}>
-            <div className={classes.formLeft}>
+            <form className={classes.formLeft}>
               <div className={classes.formInstruction}>
                 <Typography align="center" className={classes.createAcc}>
                   Create an account
@@ -62,7 +78,7 @@ export const Form: React.FC<formProps> = ({ slider }) => {
                 subject="Password"
                 type="password"
                 name="password"
-                placeholder=""
+                placeholder="password"
                 value={values.password}
                 onChange={handleInputChange}
               />
@@ -70,7 +86,7 @@ export const Form: React.FC<formProps> = ({ slider }) => {
                 subject="Confirm password"
                 name="confirm-password"
                 type="password"
-                placeholder=""
+                placeholder="confirm password"
                 value={values.confirmPassword}
                 onChange={handleInputChange}
               />
@@ -79,7 +95,9 @@ export const Form: React.FC<formProps> = ({ slider }) => {
                 label=""
                 name="currency"
                 subject="Select currency"
-                value={values.currency}
+                value={
+                  values.currency === '' ? 'select currency' : values.currency
+                }
                 onChange={handleInputChange}
               />
               <Check
@@ -90,12 +108,13 @@ export const Form: React.FC<formProps> = ({ slider }) => {
               />
               <Link className={classes.start} to="/dashboard">
                 <Button
+                  type="submit"
                   className={classes.start}
                   color="primary"
                   action="Create account"
                 />
               </Link>
-            </div>
+            </form>
           </div>
         </div>
       </div>

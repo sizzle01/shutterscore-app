@@ -4,7 +4,7 @@ import { IconStyles } from './IconStyles'
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline'
 import DeleteForever from '@mui/icons-material/DeleteForever'
 interface IconProps {
-  onChange?: (e: React.FormEvent<HTMLInputElement>) => void
+  onClick?: (e: React.FormEvent<HTMLInputElement>) => void
   IconType: any
   style?: any
   width?: string

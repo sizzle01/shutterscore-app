@@ -9,6 +9,7 @@ interface SliderProps {
   name?: string
   description?: string
   item?: string
+  className?: string
 }
 
 export const Slider: React.FC<SliderProps> = () => {
