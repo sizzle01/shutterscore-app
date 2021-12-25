@@ -3,6 +3,7 @@ import React from 'react'
 import { TransactionHistoryStyles } from './TransactionHistoryStyles'
 import moment from 'moment'
 import { Transactions } from './Mock'
+import { Categories } from '../Categories'
 
 interface TransactionHistoryProps {
   itemName?: string
@@ -37,7 +38,7 @@ export const TransactionHistory: React.FC<TransactionHistoryProps> = ({
           <Typography className={classes.historyDesc}>
             Transaction History
           </Typography>
-          <Select className={classes.category}></Select>
+          <Categories className={classes.category} />
         </div>
         <div className={classes.categoryLine}></div>
       </div>
