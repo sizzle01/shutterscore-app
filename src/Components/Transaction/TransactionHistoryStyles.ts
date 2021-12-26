@@ -16,6 +16,8 @@ export const TransactionHistoryStyles = makeStyles((theme) => ({
     fontSize: theme.typography.fontSize * 1.15,
     fontWeight: 'normal',
     fontFamily: theme.typography.fontFamily,
+    marginTop: theme.spacing(.5),
+
   },
   category: {
     width: '13%',

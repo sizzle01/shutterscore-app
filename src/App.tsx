@@ -13,6 +13,8 @@ import { Cards } from './Components/Cards'
 import { Icon } from './Components/Icon'
 import { Slider } from './Components/Carousel'
 import { MobileHomePage } from './Components/MobileHomePage'
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever'
+import { CardInfo } from './Components/CardInfo'
 
 const RouterPage = (
   props: { pageComponent: JSX.Element } & RouteComponentProps,
@@ -56,6 +58,7 @@ function App() {
                 />
               }
             />
+            <Route path="/card" element={<CardInfo />} />
           </Routes>
         </BrowserRouter>
       </div>
