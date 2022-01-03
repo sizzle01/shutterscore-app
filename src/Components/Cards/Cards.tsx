@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CardStyles } from './CardStyle'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
@@ -16,6 +16,7 @@ interface CardsProps {
   cardDate?: string
   wallet?: any
   cardIcon?: any
+  index?: number
 }
 
 export const Cards: React.FC<CardsProps> = ({
@@ -27,20 +28,31 @@ export const Cards: React.FC<CardsProps> = ({
   cardIcon,
 }) => {
   const classes = CardStyles()
+  const [editIndex, setEditIndex] = useState<CardsProps | any>(null)
 
+  const handleCard = () => {
+    console.log('we are here')
+  }
   return (
     <div className={classes.cardCont}>
       {wallet}
       {cardDetails.map((card, index) => {
         return (
-          <div className={classes.card} key={index}>
+          <div className={classes.card} key={index} onClick={handleCard}>
             <CardContent className={classes.cardInfo}>
               <div className={classes.cardTop}>
                 <Typography className={classes.cardBalance} gutterBottom>
                   {card.amount}
                   <span className={classes.cardCurrency}>{card.currency}</span>
                 </Typography>
-                <EditIcon className={classes.editIcon} />
+                <EditIcon
+                  onClick={() =>
+                    setEditIndex((editIndex: CardsProps) =>
+                      editIndex === index ? null : index,
+                    )
+                  }
+                  className={classes.editIcon}
+                />
               </div>
 
               <Typography className={classes.cardNumber} gutterBottom>
