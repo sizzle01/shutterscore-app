@@ -40,7 +40,7 @@ export const useCarouselStyles = makeStyles((theme) => ({
         textDecoration:'none',
       position:'absolute',
       bottom:40  ,
-    right:20,
+    right:22,
       width:'75%',
       display:'none'
     },
@@ -56,7 +56,8 @@ export const useCarouselStyles = makeStyles((theme) => ({
         
     } ,
     sliderButton:{
-      display:'block'
+      display:'block',
+      bottom:80,
     },
 
   },
