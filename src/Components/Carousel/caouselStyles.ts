@@ -18,6 +18,12 @@ export const useCarouselStyles = makeStyles((theme) => ({
     },
     image:{
         marginBottom:theme.spacing(8.6),
+      
+          // transform: 'rotate(90deg)',
+          // transition: 'transform 2s ease-in-out',
+          animation: `$rotate 3000ms ${theme.transitions.easing.easeInOut}`,
+  
+        
     },
     itemName:{
         fontFamily:theme.typography.fontFamily,
@@ -57,7 +63,6 @@ export const useCarouselStyles = makeStyles((theme) => ({
     } ,
     sliderButton:{
       display:'block',
-      bottom:80,
     },
 
   },
@@ -67,5 +72,21 @@ export const useCarouselStyles = makeStyles((theme) => ({
   },
   '@media screen and (max-width: 500px)': {
     
+  },
+
+  /**Key frames */
+  "@keyframes rotate": {
+    "100%": {
+      transform: "translateY(20%)"  
+    },
+    "50%": {
+      transform: "translateX(20%)"  
+    },
+    "25%": {
+      transform: "translateY(20%)"  
+    },
+    "0%": {
+      transform: "translateX(20%)"  
+    },
   },
 }))

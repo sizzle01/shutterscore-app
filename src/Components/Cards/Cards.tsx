@@ -31,7 +31,7 @@ export const Cards: React.FC<CardsProps> = ({
   const [editIndex, setEditIndex] = useState<CardsProps | any>(null)
 
   const handleCard = () => {
-    console.log('we are here')
+    console.log()
   }
   return (
     <div className={classes.cardCont}>
