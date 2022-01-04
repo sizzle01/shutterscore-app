@@ -20,6 +20,7 @@ export const Button: React.FC<ButtonProps> = ({ startIcon, action }) => {
         className={classes.btn}
         startIcon={startIcon}
         variant="contained"
+        color="secondary"
       >
         {action}
       </Buttons>
