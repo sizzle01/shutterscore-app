@@ -3,7 +3,7 @@ export const useFormStyles = makeStyles((theme) => ({
   accountPage:{
     display:'flex',
     justifyContent:'between',
-    width:'100vw',
+    width:'100%',
     height:'100vh',
     overflowX:'hidden',
   },
