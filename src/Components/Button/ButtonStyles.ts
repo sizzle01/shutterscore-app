@@ -3,6 +3,7 @@ export const useButtonStyles = makeStyles((theme) => ({
   btn:{
       backgroundColor:theme.design.colors.blue,
       width: '75%',
+      color:theme.design.colors.white,
       textTransform: "none",
       '&:hover':{
         backgroundColor: theme.design.colors.blue,
