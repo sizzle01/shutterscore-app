@@ -44,7 +44,7 @@ export const useCarouselStyles = makeStyles((theme) => ({
   sliderButton: {
     textDecoration: 'none',
     position: 'absolute',
-    bottom: 115,
+    bottom: 120,
     right: -1,
     width: '80%',
     display: 'none',
