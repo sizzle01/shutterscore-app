@@ -15,6 +15,9 @@ interface SideBarProps {
 }
 export const SideBar: React.FC<SideBarProps> = () => {
   const classes = useSideBarStyles()
+  const handleClick = () => {
+    console.log('Exit app')
+  }
   return (
     <div className={classes.sideMenu}>
       <MenuList className={classes.menu}>
@@ -37,6 +40,7 @@ export const SideBar: React.FC<SideBarProps> = () => {
       </MenuList>
       <Link className={classes.logout} to="/">
         <Button
+          onClick={handleClick}
           className={classes.btn}
           variant="text"
           startIcon={<ExitToAppIcon className={classes.exit} />}
