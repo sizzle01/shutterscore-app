@@ -1,8 +1,8 @@
 import React from 'react'
 import Carousel from 'react-material-ui-carousel'
-import { Typography } from '@material-ui/core'
+import { Button, Typography } from '@material-ui/core'
 import { useCarouselStyles } from './caouselStyles'
-import { Button } from '../Button/Button'
+
 import { Link } from 'react-router-dom'
 
 interface SliderProps {
@@ -60,7 +60,9 @@ export const Slider: React.FC<SliderProps> = () => {
             {item.description}
           </Typography>
           <Link to="/form" className={classes.sliderButton}>
-            <Button action="Get started" className={classes.sliderBtn} />
+            <Button className={classes.sliderBtn} variant="contained">
+              Get started
+            </Button>
           </Link>
         </div>
       ))}
