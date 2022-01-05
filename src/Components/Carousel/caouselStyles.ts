@@ -45,12 +45,19 @@ export const useCarouselStyles = makeStyles((theme) => ({
     sliderButton:{
         textDecoration:'none',
       position:'absolute',
-      bottom:120  ,
+      bottom:105  ,
     right:22,
       width:'75%',
       display:'none'
     },
-   
+    sliderBtn:{
+      backgroundColor:theme.design.colors.blue ,
+      color:theme.design.colors.white,
+      textTransform: "none",
+      '&:hover':{
+        backgroundColor: theme.design.colors.blue,
+      }
+    },
     
   /**MEDIA QUERIES */
 
