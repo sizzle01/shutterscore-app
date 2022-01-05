@@ -60,7 +60,7 @@ export const Slider: React.FC<SliderProps> = () => {
             {item.description}
           </Typography>
           <Link to="/form" className={classes.sliderButton}>
-            <Button color="" action="Get started" />
+            <Button action="Get started" />
           </Link>
         </div>
       ))}

@@ -45,7 +45,7 @@ export const useCarouselStyles = makeStyles((theme) => ({
     sliderButton:{
         textDecoration:'none',
       position:'absolute',
-      bottom:40  ,
+      bottom:120  ,
     right:22,
       width:'75%',
       display:'none'
@@ -63,6 +63,7 @@ export const useCarouselStyles = makeStyles((theme) => ({
     } ,
     sliderButton:{
       display:'block',
+      
     },
 
   },
@@ -71,7 +72,9 @@ export const useCarouselStyles = makeStyles((theme) => ({
 
   },
   '@media screen and (max-width: 500px)': {
-    
+    sliderButton:{
+      
+    },
   },
 
   /**Key frames */
