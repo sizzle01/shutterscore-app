@@ -5,6 +5,7 @@ import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import { Button } from '@material-ui/core'
 import Typography from '@mui/material/Typography'
+import WalletBg from '../../images/walletBg.png'
 interface WalletCardProps {
   balance: string
 }
@@ -15,7 +16,10 @@ export const WalletCard: React.FC<WalletCardProps> = ({ balance }) => {
     console.log('button response')
   }
   return (
-    <div className={classes.wallet}>
+    <div
+      className={classes.wallet}
+      style={{ backgroundImage: `url(${WalletBg})` }}
+    >
       <CardContent className={classes.walletInfo}>
         <Typography className={classes.balanceDesc} gutterBottom>
           Total available balance

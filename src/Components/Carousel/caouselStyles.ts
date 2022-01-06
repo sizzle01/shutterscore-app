@@ -45,8 +45,8 @@ export const useCarouselStyles = makeStyles((theme) => ({
     textDecoration: 'none',
     position: 'absolute',
     bottom: 120,
-    right: -1,
-    width: '80%',
+    right: 10,
+    width: '75%',
     display: 'none',
   },
 
